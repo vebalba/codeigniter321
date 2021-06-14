@@ -9,11 +9,11 @@ class News_model extends CI_Model {
         {
         if ($slug === FALSE)
         {
-                $query = $this->db->get('balba_vina_news');
+                $query = $this->db->get('balba_news');
                 return $query->result_array();
         }
 
-        $query = $this->db->get_where('balba_vina_news', array('slug' => $slug));
+        $query = $this->db->get_where('balba_news', array('slug' => $slug));
         return $query->row_array();
         }
 }
